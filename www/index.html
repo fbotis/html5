@@ -1,125 +1,139 @@
-    <!DOCTYPE html>
-    <html lang="en-US">
-        <head>
-            <meta chartset="utf-8"/>
-            <title>Blog</title>
-            <link rel="stylesheet" href="stylesheets/style.css">
-            <!--[if lte IE 8]>
-    <script>
-    document.createElement("nav");
-    document.createElement("header");
-    document.createElement("footer");
-    document.createElement("section");
-    document.createElement("aside");
-    document.createElement("article");
-    </script>
-    <![endif]-->
-            <script
-                    src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'>
-                 $(".popup").click(function(event){
-    event.preventDefault();
-    var link = this;
-    var href = link.getAttribute("href");
-    var height = link.getAttribute("data-height");
-    var width = link.getAttribute("data-width");
-    window.open (href,"popup",
-    "height=" + height +",width=" + width + "");
-    });
-            </script>
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta chartset="utf-8"/>
+		<title>Blog</title>
+		<link rel="stylesheet" href="stylesheets/style.css">
+		<!--[if lte IE 8]>
+		<script>
+		document.createElement("nav");
+		document.createElement("header");
+		document.createElement("footer");
+		document.createElement("section");
+		document.createElement("aside");
+		document.createElement("article");
+		</script>
+		<![endif]-->
+		<script
+		src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'>
+			$(".popup").click(function(event) {
+				event.preventDefault();
+				var link = this;
+				var href = link.getAttribute("href");
+				var height = link.getAttribute("data-height");
+				var width = link.getAttribute("data-width");
+				window.open(href, "popup", "height=" + height + ",width=" + width + "");
+			});
+		</script>
 
-        </head>
-        <body>
-            <header id="page_header">
-                <h1> The Blog</h1>
-            </header>
+	</head>
+	<body>
+		<header id="page_header">
+			<h1> The Blog</h1>
+		</header>
 
-            <section id="posts">
-                <article class="post">
-                    <header>
-                        <h2>How Many Should We Put You Down For?</h2>
-                        <p>Posted by Brian on
-                            <time datetime="2013-10-01T14:39">October 1st, 2013 at 2:39PM</time>
-                        </p>
-                    </header>
-                    <aside>
-                        <p>
-                            &ldquo;Never give someone a chance to say no when
-                            selling your product.&rdquo;
-                        </p>
-                    </aside>
-                    <p>
-                        The first big rule in sales is that if the person leaves empty-handed,
-                        they're likely not going to come back. That's why you have to be
-                        somewhat aggressive when you're working with a customer, but you have
-                            to make sure you don't overdo it and scare them away.
-                    </p>
-                    <p>
-                        One way you can keep a conversation going is to avoid asking questions
-                        that have yes or no answers. For example, if you're selling a service
-                        plan, don't ever ask &ldquo;Are you interested in our 3 or 5 year
-                        service plan?&rdquo; Instead, ask &ldquo;Are you interested in the 3
-                        year service plan or the 5 year plan, which is a better value?&rdquo;
-                        At first glance, they appear to be asking the same thing, and while
-                        a customer can still opt out, it's harder for them to opt out of
-                        the second question because they have to say more than just
-                        &ldquo;no.&rdquo;
-                    </p>
-                    <footer>
-                        <p><a href="comments"><i>25 Comments</i></a> ...</p>
-                    </footer>
-                </article>
-            </section>
+		<section id="posts">
+			<article class="post">
+				<header>
+					<h2>How Many Should We Put You Down For?</h2>
+					<p>
+						Posted by Brian on
+						<time datetime="2013-10-01T14:39">
+							October 1st, 2013 at 2:39PM
+						</time>
+					</p>
+				</header>
+				<aside>
+					<p>
+						&ldquo;Never give someone a chance to say no when
+						selling your product.&rdquo;
+					</p>
+				</aside>
+				<p>
+					The first big rule in sales is that if the person leaves empty-handed,
+					they're likely not going to come back. That's why you have to be
+					somewhat aggressive when you're working with a customer, but you have
+					to make sure you don't overdo it and scare them away.
+				</p>
+				<p>
+					One way you can keep a conversation going is to avoid asking questions
+					that have yes or no answers. For example, if you're selling a service
+					plan, don't ever ask &ldquo;Are you interested in our 3 or 5 year
+					service plan?&rdquo; Instead, ask &ldquo;Are you interested in the 3
+					year service plan or the 5 year plan, which is a better value?&rdquo;
+					At first glance, they appear to be asking the same thing, and while
+					a customer can still opt out, it's harder for them to opt out of
+					the second question because they have to say more than just
+					&ldquo;no.&rdquo;
+				</p>
+				<footer>
+					<p>
+						<a href="comments"><i>25 Comments</i></a> ...
+					</p>
+				</footer>
+			</article>
+		</section>
 
+		<section id="sidebare">
+			<h3>Archives</h3>
+			<ul>
+				<li>
+					<a href="http://www.google.com"	title="Holiday Pay">December 2013</a>
+				</li>
+				<li>
+					<a href="2013/07">November 2013</a>
+				</li>
+			</ul>
+		</section>
 
-            <section id="sidebare">
-                <h3>Archives</h3>
-                <ul>
-                    <li><a href="http://www.google.com" 
-                           class="popup"
-                           data-width="600"
-                            data-height="400"
-                            title="Holiday Pay">December 2013</a></li>
-                    <li><a href="2013/07">November 2013</a></li>
-                </ul>
-            </section>
+		<section id="meter">
+			<h3> Fund raising</h3>
+			<meter title="USD" id="pledge_goal" value="1000" min="0" max="3000">
+				
+			</meter>
+			<p>
+				Help us!
+			</p>
+		</section>
 
+		<footer id="page_footer">
+			<p>
+				<a href="form.html">Copyright</a> 2014 The Blog
+			</p>
+			<nav>
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Terms of Service</a>
+					</li>
+					<li>
+						<a href="#">Privacy</a>
+					</li>
+				</ul>
+			</nav>
+		</footer>
 
-            <section id="meter">
-                <h3> Fund raising</h3>
-                <meter title="USD" id="pledge_goal" value="1000" min="0" max="3000">
-                </meter>
-                <p>Help us! </p>
-            </section>
-            
-           
-           
-
-            <footer id="page_footer">
-                <p>Copyright 2014 The Blog</p>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
-                </nav>
-            </footer>
-            
-             <section id="faq">
-                <article>
-                    <h1>AwesomeCo FAQ</h1>
-                    <dl>
-                        <dt>What is it that AwesomeCo actually does?</dt>
-                        <dd>
-                            <p>
-                                AwesomeCo creates innovative solutions for business that
-                                leverage growth and promote synergy, resulting in a better
-                                life for the global community.
-                            </p>
-                        </dd>
-                    </dl>
-                </article>
-            </section>
-        </body>
-    </html>
+		<section id="faq">
+			<article>
+				<h1>AwesomeCo FAQ</h1>
+				<dl>
+					<dt>
+						What is it that AwesomeCo actually does?
+					</dt>
+					<dd>
+						<p>
+							AwesomeCo creates innovative solutions for business that
+							leverage growth and promote synergy, resulting in a better
+							life for the global community.
+						</p>
+					</dd>
+				</dl>
+			</article>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Form</title>
+		<meta charset="UTF-8" />
+
+		<link rel="stylesheet" href="stylesheets/form.css"	type="text/css" />
+
+		<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+		<script src="javascripts/modern.js"></script>
+		<script src="javascripts/fallbacks.js"></script>
+		<script src="https://raw.github.com/recurser/jquery-simple-color/master/jquery.simple-color.js"></script>
+		<script>
+			var applyColorPicker = function() {
+
+				$('input[type=color]').simpleColor();
+
+			};
+		</script>
+
+	</head>
+	<body>
+		<section>
+			<article>
+				<form method="post" action="/projects/1">
+
+					<fieldset id="personal_info">
+						<legend>
+							Project info
+						</legend>
+						<ol>
+							<li>
+								<label for="name">Name</label>
+								<input type="text" name="name" id="name"/>
+							</li>
+							<li>
+								<label for="priority">Priority</label>
+								<input type="range" min="0" max="100" name="priority" value="0" id="priority" />
+
+							</li>
+							<li>
+								<label for="estimated_hours">Estimated hours</label>
+								<input type="number" name="estimated_hours" min="0" max="1000" id="estimated_hours" />
+							</li>
+							<li>
+								<label for="start_date">Start date</label>
+								<input type="text" name="start_date" value="2013-12-01" id="start_date"/>
+							</li>
+							<li>
+								<label for="email">Email contact</label>
+								<input type="email" name="email" id="email">
+							</li>
+							<li>
+								<label for="url">Staging URL</label>
+								<input type="url" name="url" id="url">
+							</li>
+							<li>
+								<label for="project_color">Project color</label>
+								<input type="color" name="project_color" id="project_color">
+							</li>
+							<li>
+								<input type="submit" value="Submit">
+							</li>
+						</ol>
+
+					</fieldset>
+
+				</form>
+			</article>
+		</section>
+
+	</body>
+</html>
