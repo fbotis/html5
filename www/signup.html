@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="stylesheets/signup.css" type="text/css" charset="utf-8"/>
+
+		<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+		<script src="javascripts/modern.js"></script>
+		<script src="javascripts/fallbacks.js"></script>
+		<script src="https://raw.github.com/recurser/jquery-simple-color/master/jquery.simple-color.js"></script>
+	</head>
+
+	<body>
+		<section>
+			<article>
+				<form action="/signup" method="post" accept-charset="utf-8">
+					<ul>
+
+						<li>
+							<label for="first_name">First Name:</label>
+							<input id="first_name" type="text" autofocus="true" required name="first_name" placeholder="'John'" />
+						</li>
+						<li>
+							<label for="last_name">Last Name:</label>
+							<input id="last_name" type="text" required name="last_name" placeholder="'Smith'" />
+						</li>
+						<li>
+							<label for="email">Email</label>
+							<input id="email" type="email"
+							required
+							name="email" placeholder="user@example.com">
+						</li>
+						<li>
+							<label for="password">Password</label>
+							<input id="password" type="password" name="password" value=""
+							autocomplete="off" placeholder="8-10 characters"
+							pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[\W]).*$"
+							title="Password must be 8 or more characters with at
+							least one number, an uppercase letter, and one special character"
+							/>
+						</li>
+					</ul>
+					<p>
+						<input type="submit" value="Submit"/>
+					</p>
+				</form>
+			</article>
+
+		</section>
+
+	</body>
+
+</html>
